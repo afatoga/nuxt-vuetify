@@ -67,6 +67,21 @@ export default {
     apiKey: process.env.API_KEY || ""
   },
 
+  router: {
+    routes: [
+      {
+        name: "index",
+        path: "/",
+        component: "pages/index.vue"
+      },
+      {
+        name: "inspire",
+        path: "/inspire",
+        component: "pages/inspire.vue"
+      }
+    ]
+  },
+
   // generate: {
   //   routes() {
   //     return getData().map(d => `headlines/${d.code}`);
