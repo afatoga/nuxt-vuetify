@@ -2,6 +2,7 @@
 require("dotenv").config();
 
 export default {
+  mode: 'universal',
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -67,20 +68,20 @@ export default {
     apiKey: process.env.API_KEY || ""
   },
 
-  router: {
-    routes: [
-      {
-        name: "index",
-        path: "/",
-        component: "pages/index.vue"
-      },
-      {
-        name: "inspire",
-        path: "/inspire",
-        component: "pages/inspire.vue"
-      }
-    ]
-  },
+  // router: {
+  //   routes: [
+  //     {
+  //       name: "index",
+  //       path: "/",
+  //       component: "pages/index.vue"
+  //     },
+  //     {
+  //       name: "inspire",
+  //       path: "/inspire",
+  //       component: "pages/inspire.vue"
+  //     }
+  //   ]
+  // },
 
   // generate: {
   //   routes() {
