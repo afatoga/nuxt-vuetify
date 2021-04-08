@@ -1,4 +1,5 @@
-import colors from 'vuetify/es5/util/colors'
+//import colors from 'vuetify/es5/util/colors'
+require("dotenv").config();
 
 export default {
   target: 'static',
@@ -37,8 +38,7 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
+  modules: ["@nuxtjs/dotenv", "@nuxtjs/axios"],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
@@ -61,5 +61,15 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  env: {
+    apiKey: process.env.API_KEY || ""
+  },
+
+  // generate: {
+  //   routes() {
+  //     return getData().map(d => `headlines/${d.code}`);
+  //   }
+  // }
 }
