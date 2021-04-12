@@ -1,6 +1,7 @@
 <template>
   <v-app>
-    <v-app-bar app class="navbar" :class="{ 'navbar--hidden': !showNavbar }">
+    <v-app-bar app class="navbar" :class="{ 'navbar--hidden': !showNavbar }" color="cyan lighten-3"
+  dense>
       <NuxtLink to="/"><v-toolbar-title v-text="title" /></NuxtLink>
       <v-spacer />
       <v-btn class="d-md-none" icon @click.stop="rightDrawer = !rightDrawer">
