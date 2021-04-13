@@ -1,17 +1,9 @@
 <template>
   <v-row>
-    <v-col class="text-center">
+    <v-col class="text-center mt-4">
       <img src="/v.png" alt="Vuetify.js" class="mb-5" />
       <h1 v-html="pageContent[0].title.rendered"></h1>
-      <div v-html="pageContent[0].content.rendered"></div>
-      <!-- <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
-        <footer>
-          <small>
-            <em>&mdash;John Johnson</em>
-          </small>
-        </footer>
-      </blockquote> -->
+      <div v-html="pageContent[0].content.rendered" class="text-justify px-6 mt-4"></div>
     </v-col>
   </v-row>
 </template>
@@ -23,22 +15,20 @@
 
 export default {
   //mixins: [requestsMixin],
-  name: "Inspire",
+  name: "zkusebniStranka",
   // props: ["resourceName"],
 
-  data: () => ({
-    // title: null,
-    // content: null,
-    //pageContent: null,
-  }),
+  // data: () => ({
 
-  methods: {
-    // async getPageContent() {
-    //   const { data } = await this.getPages();
-    //   this.title = data[0].title.rendered;
-    //   this.content = data[0].content.rendered;
-    // }
-  },
+  // }),
+
+  // methods: {
+  //   async getPageContent() {
+  //     const { data } = await this.getPages();
+  //     this.title = data[0].title.rendered;
+  //     this.content = data[0].content.rendered;
+  //   }
+  // },
   async asyncData({$axios}) {
       // const post = await $http.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
       // return { post }
